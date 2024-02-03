@@ -15,7 +15,7 @@ export function NavbarComponent(){
   })
   return (
     <>
-    <Navbar className={`lg:fixed ${inView ? 'bg-transparent' : 'bg-white shadow-2xl' } w-full z-30`} bordered={false}>
+    <Navbar className={`fixed ${inView ? 'bg-transparent' : 'bg-white shadow-2xl' } w-full z-50`} bordered={false}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className=" items-center gap-6 hidden  md:hidden lg:flex" tag="ul">
       <Link to="/" className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
@@ -68,12 +68,12 @@ export function NavbarComponent(){
               iconAnimation={false}
             />
           </Navbar.Container>
-          <Navbar.Container className="lg:hiddenflex gap-1">
+          <Navbar.Container className="lg:hidden flex gap-1 z-10">
             <Navbar.Toggle />
           </Navbar.Container>
         </Navbar.Container>
         <Navbar.Collapse
-          collapseType="fullWidth"
+          collapseType="sidebar"
           className="fixed right-0 top-0 bg-white p-10 lg:!w-2/6 xl:!w-1/6 md:!w-2/6 w-1/2 h-full" 
         >
           <Navbar.Container tag="div" className="flex flex-col">
@@ -115,7 +115,7 @@ export function NavbarComponent(){
         </Navbar.Collapse>
       </Navbar.Container>
     </Navbar>
-    <div ref={ref} className="invisible"/>
+    <div ref={ref} className="invisible "/>
     </>
   );
 }
