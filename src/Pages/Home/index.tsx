@@ -9,7 +9,7 @@ const images = [
 export function Home() {
   return (
     <>
-      <header className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-[url('https://source.unsplash.com/random')]">
+      <header id="home" className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover  bg-no-repeat bg-[url('https://source.unsplash.com/random')]">
         <div className="absolute flex flex-col items-center justify-center gap-8 top-0 left-0 right-0 bottom-0">
           <h1 className="text-4xl text-white">Guarde seus momentos</h1>
         </div>

@@ -13,22 +13,28 @@ export function NavbarComponent(){
   const { ref, inView } = useInView({
     threshold: 0.1,
   })
+    const scrollToSection = (id : string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   return (
     <>
     <Navbar className={`fixed ${inView ? 'bg-transparent' : 'bg-white shadow-2xl' } w-full z-50`} bordered={false}>
       <Navbar.Container className="flex items-center justify-between">
         <Navbar.Container className=" items-center gap-6 hidden  md:hidden lg:flex" tag="ul">
-      <Link to="/" className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
+      <Link to="/" onClick={() => scrollToSection('home')} className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
         Home
       </Link>
-      <Link to={{}} className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
+      <Link to="/" onClick={() => scrollToSection('sobre')} className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
         Sobre
       </Link>
-      <Link to="/" className={` ${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
+      <Link to="/portifolio" className={` ${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
         Portifolio
       </Link>
-      <Link to="/" className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
-      Contate-me
+      <Link to="/" onClick={() => scrollToSection('contato')} className={`${inView ? 'text-white' : 'text-black' } hover:text-gray-400`}>
+      Contato
       </Link>
 
           </Navbar.Container>
