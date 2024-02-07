@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Carousel3D from "./Components/Carrousel";
 
 const images = [
@@ -7,6 +8,9 @@ const images = [
 ];
 
 export function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
   return (
     <>
       <header id="home" className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover  bg-no-repeat bg-[url('https://source.unsplash.com/random')]">

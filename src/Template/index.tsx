@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { NavbarComponent } from "./Components/Navbar";
 import { Contato } from "./Components/Contato";
+import { NavbarComponent } from "./Components/Navbar";
 
 export function Template(){
 

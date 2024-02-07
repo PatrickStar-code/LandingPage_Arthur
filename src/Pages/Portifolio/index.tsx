@@ -1,7 +1,12 @@
+import { useEffect } from "react"
+
 export function Portifolio() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
     return (
         <div>
-            <h1>Portifolio</h1>
+            <div className="h-screen">teste</div>
         </div>
-    );
+    )
 }
