@@ -69,12 +69,7 @@ export function NavbarComponent(){
                  lg:block"
                 `}
               />
-              <img
-                src="LogoBrancoAC.png"
-                alt="Logo do site"
-                className={`w-full h-28 hidden   lg:hidden"
-                `}
-              />
+         
             </Link>
           </Navbar.Brand>
 
