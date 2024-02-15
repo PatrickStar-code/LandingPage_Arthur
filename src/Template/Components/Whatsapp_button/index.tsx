@@ -1,0 +1,14 @@
+import { WhatsappLogo } from "phosphor-react";
+
+export function Whatsapp_button() {
+  return (
+    <a href="https://wa.me/message/ZZKOBVSCQXCHN1">
+    <div
+      className="fixed bottom-5 right-5 z-50 flex w-16 h-16 items-center justify-center rounded-full bg-green-500 text-white"
+      id="whatsapp-button"
+    >
+        <WhatsappLogo size={40} />
+    </div>
+    </a>
+  );
+}

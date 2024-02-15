@@ -31,7 +31,8 @@ const Carousel3D = ({ images }: { images: string[] }) => {
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}  className='flex items-center justify-center'>
-          <img src={image} alt={`Slide ${index}`} className="w-[32rem] h-[42rem] lg:h-[60rem] lg:w-[36rem]	 rounded-[2rem] object-cover" />
+          <img src={image} loading='lazy'  alt={`Slide ${index}`} className="w-[32rem] h-[42rem] lg:h-[60rem] lg:w-[36rem]	 rounded-[2rem] object-cover" />
+
         </SwiperSlide>
       ))}
       

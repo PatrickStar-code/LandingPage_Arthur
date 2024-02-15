@@ -1,12 +1,8 @@
 import { Navbar } from "keep-react";
-import { FacebookLogo, InstagramLogo, TwitterLogo } from "phosphor-react";
+import {InstagramLogo} from "phosphor-react";
 import { Link } from "react-router-dom";
 
-
-export function NavbarComponent(){
-
-
-    
+export function NavbarComponent() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -16,12 +12,25 @@ export function NavbarComponent(){
   return (
     <>
       <Navbar
-        className={`fixed navbar 
+        className={`sticky top-0 z-50 
         bg-white shadow-2xl
-         w-full z-50 navbar`}
+        
+         w-full`}
         bordered={false}
+        fluid={false}
       >
-        <Navbar.Container className="flex items-center justify-between">
+        <Navbar.Container className="flex items-center justify-between md:pl-4 md:pr-4">
+        <Navbar.Brand >
+            <Link to="/">
+              <img
+                src="LogoPretoAC.png"
+                alt="Logo do site"
+                className={`w-28 h-28 block
+                 lg:block"
+                `}
+              />
+            </Link>
+          </Navbar.Brand>
           <Navbar.Container
             className=" items-center gap-6 hidden  md:hidden lg:flex"
             tag="ul"
@@ -45,7 +54,7 @@ export function NavbarComponent(){
               Sobre
             </Link>
             <Link
-              to="/portifolio"
+              to="/portifolio?categoria=Todos"
               className={`text-black
               hover:text-gray-400`}
             >
@@ -60,49 +69,17 @@ export function NavbarComponent(){
               Contato
             </span>
           </Navbar.Container>
-          <Navbar.Brand>
-            <Link to="/">
-              <img
-                src="LogoPretoAC.png"
-                alt="Logo do site"
-                className={`w-full h-28 block 
-                 lg:block"
-                `}
-              />
-         
-            </Link>
-          </Navbar.Brand>
+        
 
           <Navbar.Container className="flex items-center gap-6">
             <Navbar.Container
               tag="ul"
               className="lg:flex md:flex hidden items-center justify-between gap-4"
             >
+            
               <Navbar.Link
-                icon={
-                  <FacebookLogo
-                    size={30}
-                    color="black"
-                  />
-                }
-                iconAnimation={false}
-              />
-              <Navbar.Link
-                icon={
-                  <InstagramLogo
-                    size={30}
-                    color="black"
-                  />
-                }
-                iconAnimation={false}
-              />
-              <Navbar.Link
-                icon={
-                  <TwitterLogo
-                    size={30}
-                    color="black"
-                  />
-                }
+                href="https://www.instagram.com/arthurcesarfotografiia/"
+                icon={<InstagramLogo size={35} color="black" />}
                 iconAnimation={false}
               />
             </Navbar.Container>
@@ -120,11 +97,14 @@ export function NavbarComponent(){
                 className="flex flex-col gap-5 justify-center"
               >
                 <Link
-                to="/"
-                  className="!py-0"
+                  to="/"
+                  className={`
+                "text-black"
+               hover:text-gray-400`}
                   onClick={() => scrollToSection("home")}
-                />
-                Home
+                >
+                  Home
+                </Link>
                 <Link
                   to="/"
                   onClick={() => scrollToSection("sobre")}
@@ -132,7 +112,7 @@ export function NavbarComponent(){
                 >
                   Sobre
                 </Link>
-                <Link to="/portifolio" className={`!py-0`}>
+                <Link to="/portifolio?categoria=Todos" className={`!py-0`}>
                   Portifolio
                 </Link>
                 <span
@@ -142,23 +122,7 @@ export function NavbarComponent(){
                   Contato
                 </span>
               </Navbar.Container>
-              <Navbar.Container
-                tag="ul"
-                className="flex mt-10 gap-5 justify-center"
-              >
-                <Navbar.Link
-                  icon={<FacebookLogo size={30} color="#444" />}
-                  iconAnimation={false}
-                />
-                <Navbar.Link
-                  icon={<InstagramLogo size={30} color="#444" />}
-                  iconAnimation={false}
-                />
-                <Navbar.Link
-                  icon={<TwitterLogo size={30} color="#444" />}
-                  iconAnimation={false}
-                />
-              </Navbar.Container>
+        
             </Navbar.Container>
           </Navbar.Collapse>
         </Navbar.Container>
@@ -166,4 +130,3 @@ export function NavbarComponent(){
     </>
   );
 }
-
