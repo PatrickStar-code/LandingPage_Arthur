@@ -31,10 +31,10 @@ export function Home() {
                 Nosso Time
               </h1>
 
-              <p className="max-w-2xl mt-4 text-gray-500 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                incidunt ex placeat modi magni quia error alias, rem similique,
-                at omnis eligendi optio eos harum.
+              <p className="max-w-2xl mt-4 text-gray-800   ">
+                Explore nosso portfólio e deixe-nos capturar momentos memoráveis
+                para você. Nossa equipe de fotógrafos apaixonados está pronta
+                para transformar suas ocasiões especiais em memórias eternas.
               </p>
             </div>
 
@@ -50,12 +50,12 @@ export function Home() {
                   Arthur Cesar
                 </h1>
 
-                <p className="mt-2 text-gray-500 capitalize flex item-center gap-2">
+                <p className="mt-2 text-gray-700 capitalize flex item-center gap-2">
                   <a href="https://www.instagram.com/arthurcesarfotografiia/">
                     <InstagramLogo size={32} />
                   </a>
                   <a href="https://wa.me/message/ZZKOBVSCQXCHN1">
-                  <WhatsappLogo size={32} />
+                    <WhatsappLogo size={32} />
                   </a>
                 </p>
               </div>
@@ -71,7 +71,7 @@ export function Home() {
                   Wesley Cardoso
                 </h1>
 
-                <p className="mt-2 text-gray-500 capitalize flex items-center gap-2">
+                <p className="mt-2 text-gray-700 capitalize flex items-center gap-2">
                   <InstagramLogo size={32} />
                   <WhatsappLogo size={32} />
                 </p>
