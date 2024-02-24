@@ -76,7 +76,7 @@ export function Contato() {
         </form>
       </div>
       <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-        <a href="mailto:arthurcesarfotografiasite@email.com" className="text-indigo-500">arthurcesarfotografiasite@email.com</a>
+        <a href="mailto:arthurcesarfotografiasite@gmail.com" className="text-indigo-500">arthurcesarfotografiasite@gmail.com</a>
       </div>
     </div>
     <ToastContainer 
