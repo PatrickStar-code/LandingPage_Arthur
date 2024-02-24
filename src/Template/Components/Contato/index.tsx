@@ -1,14 +1,34 @@
+
+import emailjs from "emailjs-com";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export function Contato() {
+
+  function sendEmail(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    emailjs.sendForm("service_ductdmr","template_s1ov8nu",e.currentTarget, "0W6MJ_TQbC-xWQWsl").then(
+      () => {
+        toast.success("Email enviado com sucesso!");
+      }
+    ).catch(
+      (error) => { 
+          toast.error(error.text);
+        
+      }
+    )
+    e.currentTarget.reset();
+  }
   return (
+    <>
     <div
       className="flex flex-col mt-24 p-4 items-center justify-start  bg-white"
       id="contato"
     >
       <div className="mx-auto w-full max-w-lg">
         <h1 className="text-4xl font-medium">Entre em contato:</h1>
-        <p className="mt-3">Email us at help@domain.com or message us here:</p>
 
-        <form action="https://api.web3forms.com/submit" className="mt-10">
+        <form onSubmit={sendEmail} className="mt-10">
           <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="relative z-0">
@@ -19,7 +39,7 @@ export function Contato() {
                 placeholder=" "
               />
               <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
-              Nome
+                Nome
               </label>
             </div>
             <div className="relative z-0">
@@ -56,11 +76,22 @@ export function Contato() {
         </form>
       </div>
       <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-    <a className="text-indigo-500">example@email.com</a>
-    <p className="leading-normal my-5">49 Smith St.
-      Saint Cloud, MN 56301
-    </p>
-  </div>
+        <a href="mailto:arthurcesarfotografiasite@email.com" className="text-indigo-500">arthurcesarfotografiasite@email.com</a>
+      </div>
     </div>
+    <ToastContainer 
+      position="bottom-left"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      transition={Bounce}
+    />
+    </>
   );
 }

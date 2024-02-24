@@ -33,6 +33,10 @@ export function Portifolio() {
     setItenList(itensList + 8);
   }
 
+  function resetList() {
+    setItenList(8);
+  }
+
   function openViewer(index: number) {
     setVisible(true);
     setActiveIndex(index);
@@ -59,6 +63,7 @@ export function Portifolio() {
               {categoria.map((item) => (
                 <Link
                   key={item}
+                  onClick={() => resetList()}
                   to={`/portifolio?categoria=${item}`}
                   className=""
                 >
@@ -94,7 +99,7 @@ export function Portifolio() {
 
                 <MagnifyingGlass
                   size={40}
-                  className="absolute  text-white font-bold left-[45%] top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute  text-white font-bold lg:left-[45%] left-[40%] top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}

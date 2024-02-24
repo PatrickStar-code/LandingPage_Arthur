@@ -1,9 +1,11 @@
 import Carousel3D from "./Components/Carrousel";
 
 const images = [
-  "https://source.unsplash.com/random",
-  "https://source.unsplash.com/random",
-  "https://source.unsplash.com/random",
+  "assets/imgs/Casamento/Casamento_Tainara/Casamento (2).jpg",
+  "assets/imgs/Casamento/Casamento_Tainara/Casamento (4).jpg",
+  "assets/imgs/Aniversarios/15_Lorrane/foto (13).jpg",
+  "assets/imgs/Ensaios/Markson/foto (18).jpg",
+  "assets/imgs/Formatura/Formaturas/Blenda/foto (3).jpg",
 ];
 
 import Arthurimg from "../../assets/imgs/Arthur.jpeg";
@@ -72,8 +74,9 @@ export function Home() {
                 </h1>
 
                 <p className="mt-2 text-gray-700 capitalize flex items-center gap-2">
-                  <InstagramLogo size={32} />
-                  <WhatsappLogo size={32} />
+                  <a href="https://www.instagram.com/wesleycjf/">
+                    <InstagramLogo size={32} />
+                  </a>
                 </p>
               </div>
             </div>
