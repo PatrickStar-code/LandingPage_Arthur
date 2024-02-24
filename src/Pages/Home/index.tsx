@@ -30,7 +30,7 @@ export function Home() {
           <div className="xl:flex xl:items-center xL:-mx-4">
             <div className="xl:w-1/2 xl:mx-4">
               <h1 className="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl ">
-                Nosso Time
+                Nossa Equipe
               </h1>
 
               <p className="max-w-2xl mt-4 text-gray-800   ">
