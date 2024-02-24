@@ -53,10 +53,16 @@ export function Home() {
                 </h1>
 
                 <p className="mt-2 text-gray-700 capitalize flex item-center gap-2">
-                  <a href="https://www.instagram.com/arthurcesarfotografiia/">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/arthurcesarfotografiia/"
+                  >
                     <InstagramLogo size={32} />
                   </a>
-                  <a href="https://wa.me/message/ZZKOBVSCQXCHN1">
+                  <a
+                    target="_blank"
+                    href="https://wa.me/message/ZZKOBVSCQXCHN1"
+                  >
                     <WhatsappLogo size={32} />
                   </a>
                 </p>
@@ -74,7 +80,10 @@ export function Home() {
                 </h1>
 
                 <p className="mt-2 text-gray-700 capitalize flex items-center gap-2">
-                  <a href="https://www.instagram.com/wesleycjf/">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/wesleycjf/"
+                  >
                     <InstagramLogo size={32} />
                   </a>
                 </p>

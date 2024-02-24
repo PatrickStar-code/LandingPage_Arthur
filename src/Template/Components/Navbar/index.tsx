@@ -1,5 +1,5 @@
 import { Navbar } from "keep-react";
-import {InstagramLogo} from "phosphor-react";
+import { InstagramLogo } from "phosphor-react";
 import { Link } from "react-router-dom";
 
 export function NavbarComponent() {
@@ -20,7 +20,7 @@ export function NavbarComponent() {
         fluid={false}
       >
         <Navbar.Container className="flex items-center justify-between md:pl-4 md:pr-4">
-        <Navbar.Brand >
+          <Navbar.Brand>
             <Link to="/">
               <img
                 src="LogoPretoAC.png"
@@ -69,19 +69,18 @@ export function NavbarComponent() {
               Contato
             </span>
           </Navbar.Container>
-        
 
           <Navbar.Container className="flex items-center gap-6">
             <Navbar.Container
               tag="ul"
               className="lg:flex md:flex hidden items-center justify-between gap-4"
             >
-            
-              <Navbar.Link
+              <a
+                target="_blank"
                 href="https://www.instagram.com/arthurcesarfotografiia/"
-                icon={<InstagramLogo size={35} color="black" />}
-                iconAnimation={false}
-              />
+              >
+                <InstagramLogo size={32} />
+              </a>
             </Navbar.Container>
             <Navbar.Container className="lg:hidden flex gap-1 z-10">
               <Navbar.Toggle />
@@ -122,7 +121,6 @@ export function NavbarComponent() {
                   Contato
                 </span>
               </Navbar.Container>
-        
             </Navbar.Container>
           </Navbar.Collapse>
         </Navbar.Container>
